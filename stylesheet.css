@@ -1308,3 +1308,50 @@ audio {
     		-webkit-transform: scale(0.9);
     	}
     }*/
+
+	
+
+	 /* .co {
+		position: fixed;
+		bottom: 380px;
+		display: flex;
+		justify-content: center; 
+		 align-items: end; 
+		gap: 15px; 
+		width: 100%;
+		height: 100%; 
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
+
+	
+	.balloons {
+		width: 120px; 
+		height: 120px; 
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background: transparent;
+	}
+
+	.balloons h2 {
+		margin: 0;
+		font-size: 40px; 
+	}
+
+	
+	@media (max-width: 400px) {
+		.co {
+			gap: 10px; 
+		}
+
+		.balloons {
+			width: 100px; 
+			height: 100px;
+		}
+
+		.balloons h2 {
+			font-size: 30px; 
+		}
+	}  */

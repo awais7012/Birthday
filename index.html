@@ -121,7 +121,10 @@
 		</div>
 		<div class="row message">
 			<div class="col-md-12">
-				<p>Today is 3 Jan</p>
+				<p>Countdown to 29 Jan</p>
+				<p id="current-date"></p>
+<p id="remaining-days"></p>
+
 				<p>as beautiful as other days</p>
 				<p>but you realize</p>
 				<p>another year has gone</p>
@@ -210,6 +213,51 @@
 
   ga('create', 'UA-58229732-1', 'auto');
   ga('send', 'pageview');
+  
+
+
+  // Set the start and end dates
+  
+
+
+  
+function updateCountdown() {
+	
+	const currentDate = new Date();
+	
+	
+	const targetDate = new Date('2025-01-29');
+  
+	
+	const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+	document.getElementById('current-date').innerHTML = `Today is: ${currentDate.toLocaleDateString('en-PK', options)}`;
+  
+	console.log(currentDate.toLocaleDateString('en-PK', options))
+	const timeDifference = targetDate - currentDate;
+  console.log(timeDifference)
+	
+	const remainingDays = Math.ceil(timeDifference / (1000 * 3600 * 24));  
+ console.log(remainingDays)
+	
+	if (remainingDays > 0) {
+	  document.getElementById('remaining-days').innerHTML = `Remaining days: ${remainingDays}`;
+	} else if (remainingDays === 0) {
+		document.getElementById('current-date').style.display = 'none'
+	  document.getElementById('remaining-days').innerHTML = "Today is the day!";
+	} else {
+	  document.getElementById('remaining-days').innerHTML = "The event has passed!";
+	}
+  }
+  
+  // Initialize the countdown
+  updateCountdown();
+  
+  // Update the countdown every second
+  setInterval(updateCountdown, 1000);
+  
+  
+
+
 
 </script>
 </html>
